@@ -6,3 +6,5 @@ A work in progress.
 Dependencies
 ------
 [lmmfranco's nintendo-switch-eshop library](https://github.com/lmmfranco/nintendo-switch-eshop)
+
+[Express](https://github.com/expressjs/express)
