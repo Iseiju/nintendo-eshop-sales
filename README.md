@@ -18,9 +18,9 @@ Installation - How to run
 
 It should now print `listening to port 3000` in the terminal. Try this link [http:\\localhost:3000\eshop-sales](http:\\localhost:3000\eshop-sales) and wait for it to finish fetching the data.
 
-Pending Tasks
+To-Do
 ------
 
 1. Pagination of requests
-2. Deploy to a server
+2. Server hosting
 
