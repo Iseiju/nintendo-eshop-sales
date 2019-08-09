@@ -9,15 +9,23 @@ app.listen(3000, function () {
 })
 
 app.get('/eshop-sales', (req, res) => {
-    getGamesAmerica().then((result) => {
-        let array = []
-        let url = 'https://www.nintendo.com'
+    let array = []
+    let url = "https://www.nintendo.com"
 
+    getGamesAmerica().then((result) => {
         result.forEach((element) => {
             if (element.salePrice != null && element.platform == "Nintendo Switch") {
+                let company = element.publishers == null ? element.developers : element.publishers
                 var game = {
+                    url: url + element.url,
                     title: element.title,
+                    description: element.description,
                     boxArt: url + element.boxArt,
+                    releaseDate: element.releaseDateMask,
+                    categories: element.categories,
+                    esrb: element.esrb,
+                    company: company,
+                    availability: element.availability,
                     price: element.msrp,
                     salePrice: element.salePrice
                 }
