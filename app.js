@@ -4,8 +4,9 @@ const {
 } = require('nintendo-switch-eshop');
 const app = express()
 
-app.listen(3000, function () {
-    console.log('listening to port 3000')
+const PORT = process.env.PORT || 3000
+app.listen(PORT, function () {
+    console.log('listening to port ' + PORT)
 })
 
 app.get('/eshop-sales', (req, res) => {
