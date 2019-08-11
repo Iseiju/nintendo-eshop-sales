@@ -9,6 +9,10 @@ app.listen(PORT, function () {
     console.log('listening to port ' + PORT)
 })
 
+app.get('/', (req, res) => {
+    res.sendStatus(200)
+})
+
 app.get('/eshop-sales', (req, res) => {
     let array = []
     let url = "https://www.nintendo.com"
