@@ -1,5 +1,9 @@
 # nintendo-eshop-sales
 
+### **Now deployed to Heroku!** [https://switchsales.herokuapp.com/eshop-sales](https://switchsales.herokuapp.com/eshop-sales)
+
+------
+
 ### An Express.js REST API that returns a JSON list of Nintendo Switch games currenty on sale.
 A work in progress.
 
@@ -9,7 +13,7 @@ Dependencies
 
 [Express - Fast, unopinionated, minimalist web framework for Node.js](https://github.com/expressjs/express)
 
-Installation - How to run
+Installation & How to run (local)
 ------
 
 1. Download and install [Node.js](https://nodejs.org/en/)
@@ -22,5 +26,3 @@ To-Do
 ------
 
 1. Pagination of requests
-2. Server hosting
-
