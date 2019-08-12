@@ -1,6 +1,6 @@
 # nintendo-eshop-sales
 
-### **Now deployed to Heroku!** [https://switchsales.herokuapp.com/eshop-sales](https://switchsales.herokuapp.com/eshop-sales)
+### **Now deployed on Heroku!** [https://switchsales.herokuapp.com/eshop-sales](https://switchsales.herokuapp.com/eshop-sales)
 
 ------
 
