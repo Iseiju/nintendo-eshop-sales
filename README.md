@@ -1,6 +1,6 @@
 # nintendo-eshop-sales
 
-### **Now deployed on Heroku!** [https://switchsales.herokuapp.com/eshop-sales](https://switchsales.herokuapp.com/eshop-sales)
+### **Now deployed on Heroku!** [https://switchsales.herokuapp.com/games/eshop-sales](https://switchsales.herokuapp.com/games/eshop-sales)
 
 ------
 
@@ -20,7 +20,7 @@ Installation & How to run (local)
 2. Open a terminal within the project's directory
 3. type `node app.js` and hit enter
 
-It should now print `listening to port 3000` in the terminal. Try this link `http:\\localhost:3000\eshop-sales` and wait for it to finish fetching the data.
+It should now print `listening to port 3000` in the terminal. Try this link `http://localhost:3000/games/eshop-sales` and wait for it to finish fetching the data.
 
 To-Do
 ------
