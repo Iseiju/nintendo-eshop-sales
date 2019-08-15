@@ -14,6 +14,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/eshop-sales', (req, res) => {
+    var id = 0
     let array = []
     let url = "https://www.nintendo.com"
 
@@ -22,6 +23,7 @@ app.get('/eshop-sales', (req, res) => {
             if (element.salePrice != null && element.platform == "Nintendo Switch") {
                 let company = element.publishers == null ? element.developers : element.publishers
                 var game = {
+                    id: id,
                     url: url + element.url,
                     title: element.title,
                     description: element.description,
@@ -35,21 +37,13 @@ app.get('/eshop-sales', (req, res) => {
                     salePrice: element.salePrice
                 }
                 array.push(game)
+                id = id + 1
             }
         });
-
-        array.sort((left, right) => {
-            if (left.title < right.title) {
-                return -1
-            } else {
-                return 0
-            }
-        })
 
         let dataEnvelope = {}
         dataEnvelope.data = array
 
         res.send(dataEnvelope)
-
     }).catch(console.error)
 })
