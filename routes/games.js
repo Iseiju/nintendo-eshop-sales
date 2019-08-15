@@ -1,5 +1,8 @@
 const express = require('express')
 const router = express.Router()
+const {
+    getGamesAmerica
+} = require('nintendo-switch-eshop');
 
 router.get('/eshop-sales', (req, res) => {
     var id = 0
@@ -8,6 +11,7 @@ router.get('/eshop-sales', (req, res) => {
 
     getGamesAmerica().then((result) => {
         result.forEach((element) => {
+            console.log(element)
             if (element.salePrice != null && element.platform == "Nintendo Switch") {
                 let company = element.publishers == null ? element.developers : element.publishers
                 var game = {

@@ -1,7 +1,4 @@
 const express = require('express')
-const {
-    getGamesAmerica
-} = require('nintendo-switch-eshop');
 const app = express()
 const PORT = process.env.PORT || 3000
 
