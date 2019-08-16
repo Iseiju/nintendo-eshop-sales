@@ -7,12 +7,12 @@ const {
 router.get('/eshop-sales', (req, res) => {
     var id = 0
     let array = []
-    let url = "https://www.nintendo.com"
+    let url = 'https://www.nintendo.com'
 
-    getGamesAmerica().then((result) => {
+    getGamesAmerica(['all']).then((result) => {
         result.forEach((element) => {
-            if (element.salePrice != null && element.platform == "Nintendo Switch") {
-                let company = element.publishers == null ? element.developers : element.publishers
+            if (element.salePrice != null && element.platform == 'Nintendo Switch') {
+                let company = element.developers == null ? element.publishers : element.developers
                 var game = {
                     id: id,
                     url: url + element.url,
@@ -36,7 +36,10 @@ router.get('/eshop-sales', (req, res) => {
         dataEnvelope.data = array
 
         res.send(dataEnvelope)
-    }).catch(console.error)
+    }).catch((error) => {
+        console.log(error)
+        res.sendStatus(400)
+    })
 })
 
 module.exports = router
