@@ -13,6 +13,11 @@ router.get('/eshop-sales', (req, res) => {
         result.forEach((element) => {
             if (element.salePrice != null && element.platform == 'Nintendo Switch') {
                 let company = element.developers == null ? element.publishers : element.developers
+
+                if (company == null) {
+                    company = [""]
+                }
+
                 var game = {
                     id: id,
                     url: url + element.url,
