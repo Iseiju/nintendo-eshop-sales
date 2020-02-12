@@ -40,11 +40,8 @@ router.get('/eshop-sales', (req, res) => {
         let dataEnvelope = {}
         dataEnvelope.data = array
 
-        console.log(dataEnvelope.data.length)
-
         res.send(dataEnvelope)
     }).catch((error) => {
-        console.log(error)
         res.sendStatus(400)
     })
 })
