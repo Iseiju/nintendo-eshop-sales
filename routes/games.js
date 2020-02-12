@@ -14,24 +14,21 @@ router.get('/eshop-sales', (req, res) => {
             if (element.salePrice != null && element.platform == 'Nintendo Switch') {
                 let company = element.developers == null ? element.publishers : element.developers
 
-                if (company == null) {
-                    company = [""]
-                }
-
                 var game = {
                     id: id,
                     url: url + element.url,
                     title: element.title,
                     description: element.description,
-                    boxArt: url + element.boxArt,
+                    boxArt: element.boxArt.includes(url) ? element.boxArt : url + element.boxArt,
                     releaseDate: element.releaseDateMask,
                     categories: element.categories,
                     esrb: element.esrb,
-                    company: company,
+                    company: company == null ? [""] : company,
                     availability: element.availability,
                     price: element.msrp,
                     salePrice: element.salePrice
                 }
+
                 array.push(game)
                 id = id + 1
             }
