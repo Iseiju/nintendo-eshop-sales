@@ -1,6 +1,6 @@
 # nintendo-eshop-sales
 
-### **Now deployed on Heroku!** [https://switchsales.herokuapp.com/games/eshop-sales](https://switchsales.herokuapp.com/games/eshop-sales)
+### **API Endpoint** [https://switchsales.herokuapp.com/games/eshop-sales](https://switchsales.herokuapp.com/games/eshop-sales)
 
 ------
 
