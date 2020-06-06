@@ -25,4 +25,4 @@ Front-End Mobile Apps (WIP)
 
 [iOS](https://github.com/Iseiju/eshop-sales-ios)
 
-**Flutter** - In Progress
+[Flutter](https://github.com/Iseiju/eshop-sales-flutter)
